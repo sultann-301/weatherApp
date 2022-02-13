@@ -3,7 +3,7 @@ const axios = require('axios').default;
 
 async function getLatAndLong(countryName) {
   try {
-    const response = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${countryName}&limit=5&appid=${myAPIkey}`);
+    const response = await axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${countryName}&limit=5&appid=${myAPIkey}`);
     const { lat, lon } = response.data[0];
     console.log(response.data);
     const coordinatesObject = { lat, lon };
@@ -27,7 +27,7 @@ async function getWeather() {
     let chosenTempSystem = '';
     // eslint-disable-next-line no-unused-expressions
     tempCheckbox.checked ? chosenTempSystem = 'imperial' : chosenTempSystem = 'metric';
-    const weatherSearch = await axios.get(`http://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lon}&units=${chosenTempSystem}&appid=${myAPIkey}`);
+    const weatherSearch = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lon}&units=${chosenTempSystem}&appid=${myAPIkey}`);
     const weatherData = weatherSearch.data.main;
 
     console.log(weatherSearch.data);
