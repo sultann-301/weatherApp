@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;500;700&display=swap');
+
+:root{
+    --brown-red: #533747;
+    --dark-purple: #5f506b;
+    --lighterDark-purple: #6A6B83;
+    --dark-teal: #76949F;
+    --light-teal: #86BBBD;
+}
+body{
+    background-color: var(--light-teal);
+}
+
+
+h1{
+    
+    font-family: "Raleway", sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    color: white;
+   
+    
+
+    
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--brown-red);
+    border: 1px solid var(--brown-red);
+
+
+}
+
+
+
+.container{
+    margin:10px;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-purple);
+
+   
+    
+}
+
+form{
+    color:white;
+    font-family: "Raleway", sans-serif;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(2,auto);
+    
+    gap: 10px;
+}
+form label{
+    cursor: pointer;
+    user-select: none;
+    margin:10px;
+    font-size: 1.75rem;
+    width: auto;
+    font-weight: 400;
+    
+
+}
+
+form input{
+    grid-column: 1/3;
+    padding:10px;
+    margin: 10px;
+    border-radius: 15px;
+    border:none;
+    width: auto;
+    background-color: var(--lighterDark-purple);
+    color:white;
+    font-size: 1.25rem;
+    transition: transform 300ms ease-in-out, outline 300ms ease-in-out;
+}
+
+form #country:focus{
+    outline: 1px solid var(--dark-teal)
+    
+}
+form #country:hover{
+    transform: scaleX(1.02)
+}
+
+#tempSys{
+   appearance: none;
+   width:min-content;
+    
+}
+
+.switch{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--lighterDark-purple);
+    border: 3px solid var(--lighterDark-purple);
+    width:70px;
+    border-radius: 10%;
+    margin:10px;
+    
+    
+    
+    
+}
+
+.slider{
+    cursor: pointer;
+    flex: 0 1 30px;
+    background-color: var(--dark-teal);
+    transition: transform 300ms ease-in-out;
+    transform: translateX(-20px);
+    
+}
+
+.round{
+    border-radius: 60%;
+}
+
+#tempSys:checked + .slider{
+    background-color: var(--light-teal);
+    transform: translateX(20px)
+}
+
+
+
+
+form button{
+    grid-column: 1/3;
+    cursor: pointer;
+    border: none;
+    background-color: lightblue;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 10px;
+    font-size: 1.5rem;
+    background-color: var(--light-teal);
+    color:black;
+    transition: background-color 300ms ease-in-out;
+}
+
+form button:hover{
+    background-color: var(--dark-teal);
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    font-family: "Raleway", sans-serif;
+    transition: opacity 300ms ease-in-out;
+
+}
+
+.card-container h2{
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.weather-card{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: all 300ms ease-in-out;
+}
+
+
